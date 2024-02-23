@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GITHUB授权登录</title>
+    <style>
+        .btn {
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            border-color: skyblue;
+            background-color: skyblue;
+            border-radius: 5px;
+            margin: 50px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" onmouseup="handleClick()">
+        点击登录
+    </button>
+</body>
+
+<script>
+    const client_id = '你的client_id';
+    const redirect_uri = 'http://localhost:5050/oauth/github'; // 重定向链接
+    const url = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}`;
+    
+    function handleClick() {
+        console.log(111)
+        window.open(url);
+    }
+</script>
+</html>
